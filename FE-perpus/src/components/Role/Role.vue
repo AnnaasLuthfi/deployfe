@@ -70,7 +70,7 @@ const showAllRole = async () => {
     roleAllData.value = data.data
   } catch (error) {
     console.log(error);
-    alert("Terjadi Kesalahan")
+    alert("Terjadi Kesalahans")
   }
 }
 

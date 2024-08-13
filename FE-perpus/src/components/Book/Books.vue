@@ -61,16 +61,14 @@
                         class="block w-full py-3 px-6 text-center align-middle text-xs font-bold uppercase transition-all hover:scale-105 "
                         type="button" v-if="
                             authStore.currentUser &&
-                            authStore.currentUser.role.name ===
-                            'owner'">
+                            authStore.currentUser.role.name === 'owner'">
                         Edit
                     </RouterLink>
                     <RouterLink :to="{ name: 'UpdateBooks', params: { id: book.id } }"
                         class="block w-full py-3 px-6 text-center align-middle text-xs font-bold uppercase transition-all hover:scale-105 "
                         type="button" v-if="
                             authStore.currentUser &&
-                            authStore.currentUser.role.name ===
-                            'owner'" @click="deleteBookData(book.id)">
+                            authStore.currentUser.role.name === 'owner'" @click="deleteBookData(book.id)">
                         Delete
                     </RouterLink>
 
@@ -122,8 +120,8 @@ const deleteBookData = async (inp) => {
         );
 
         alert("Sukses Delete Book");
-        router.push({ name: "Books" });
         location.reload();
+        router.push({ name: "Books" });
     } catch (error) {
         console.log(error);
     }

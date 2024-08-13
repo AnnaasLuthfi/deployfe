@@ -142,7 +142,6 @@ export const useAuthStore = defineStore("user", () => {
     };
 
     const logoutUser = async () => {
-        
             localStorage.setItem("token", null);
             localStorage.setItem("user", null);
     
@@ -157,7 +156,7 @@ export const useAuthStore = defineStore("user", () => {
     
             alert("Sukses Logout")
             router.push({ name: "Home" });
-        
+
     };
 
     return {
